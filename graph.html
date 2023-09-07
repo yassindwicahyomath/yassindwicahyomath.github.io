@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unduh File PDF</title>
+    <!-- Menggunakan Bootstrap CSS untuk tampilan yang responsif -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center">Unduh File PDF</h1>
+                <p class="text-center">Klik tombol di bawah ini untuk mengunduh file PDF.</p>
+                <button id="downloadBtn" class="btn btn-primary btn-block">Unduh PDF</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menggunakan Bootstrap JavaScript untuk tampilan yang responsif -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Fungsi untuk mengunduh file PDF saat tombol diklik
+        document.getElementById("downloadBtn").addEventListener("click", function() {
+            // Ganti URL dengan URL file PDF yang ingin Anda unduh
+            var pdfUrl = "Kerangka Web.pdf";
+            
+            // Membuat elemen <a> yang tidak terlihat dan mengarahkannya ke URL PDF
+            var link = document.createElement("a");
+            link.href = pdfUrl;
+            link.target = "_blank";
+            link.download = "file.pdf"; // Nama file yang akan diunduh
+            
+            // Simulasikan klik pada elemen <a> yang tidak terlihat
+            link.click();
+        });
+    </script>
+</body>
+</html>

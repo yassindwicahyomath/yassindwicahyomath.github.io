@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CalcSquad</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+      <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                processEscapes: true
+            }
+        });
+    </script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="m-0">CalcSquad</h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="coba.html" class="nav-item nav-link">Beranda</a>
+                        <a href="about.html" class="nav-item nav-link">Tentang</a>
+                       <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Fitur</a>
+                            <div class="dropdown-menu m-0">
+                                 <a href="pagecal.html" class="dropdown-item active">Matematika</a>
+                                <a href="Materi.html" class="dropdown-item">Materi</a>
+                                <a href="pagecon.html" class="dropdown-item">Fisika</a>
+                                <a href="kuis1.html" class="dropdown-item">Kuis Fisika</a>
+                                <a href="kuis2.html" class="dropdown-item">Kuis Matematika</a>
+                            </div>
+                        </div>
+    
+            </nav>
+
+            <div class="container-xxl py-5 bg-primary hero-header">
+                <div class="container my-4 py-4 px-lg-5">
+                    <div class="row g-5 py-5">
+                        <div class="col-12 text-center">
+                            <h1 class="text-white animated slideInDown">Materi</h1>
+                            <hr class="bg-white mx-auto mt-0" style="width: 90px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="container mt-5">
+            <h3>Teorema Fundamental Homomorfisma Grup (TUHG)</h3>
+            <div class="mt-4">
+                <div class="alert alert-primary">
+                    <h4 class="alert-heading">Teorema</h4>
+                     <p>Jika \(f:G\to S\) adalah homomorfisma grup, maka berlaku</p>
+            <div style="text-align:center;">
+                \[G/Ker(f) \cong Im(f).\]
+            </div>
+                    </div>
+          </div>
+
+            <div class="example">
+    <p>Diperhatikan homomorfisma $\beta: \mathbb{Z}\to\mathbb{Z}_5$, yakni dengan definisi $\beta(n)=\overline{n}$ untuk setiap $n \in \mathbb{Z}.$ Mudah dipahami bahwa $\beta$ bersifat surjektif dan juga mudah diketahui bahwa $Ker(f)= 5\mathbb{Z}.$</p>
+    <p>Berdasarkan TFHG, diperoleh \(\mathbb{Z}/5\mathbb{Z} \cong \mathbb{Z}_5.\)</p>
+  </div>
+   <h3>How to show two groups are isomorphic</h3>
+  <div style="text-align: left;">
+    <p>The standard way to show \(G \cong H\) is to construct an isomorphism \(\phi: G \to H\). When the domain is a quotient, there is another method, due to the <strong>Fundamental Homomorphism Theorem</strong>.</p>
+    <p>Suppose we want to show that \(G/N \cong H.\) There are two approaches:</p>
+    <ol>
+      <li>Define a map \(\phi: G/N \to H\) and prove that it is <strong>well-defined</strong>, a <strong>homomorphism</strong>, and a <strong>bijection</strong>.</li>
+      <li>Define a map \(\phi : G \to H\) and prove that it is a <strong>homomorphism</strong>, a <strong>surjection</strong> (onto), and that \(Ker(\phi)=N\).</li>
+    </ol>
+  </div>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+
+    <script src="js/main.js"></script>
+
+   <div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-0">
+            <button id="downloadBtn" class="btn btn-primary btn-block btn-lg">Unduh PDF</button>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Menggunakan Bootstrap JavaScript untuk tampilan yang responsif -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Fungsi untuk mengunduh file PDF saat tombol diklik
+        document.getElementById("downloadBtn").addEventListener("click", function() {
+            // Ganti URL dengan URL file PDF yang ingin Anda unduh
+            var pdfUrl = "mt7.pdf";
+            
+            // Membuat elemen <a> yang tidak terlihat dan mengarahkannya ke URL PDF
+            var link = document.createElement("a");
+            link.href = pdfUrl;
+            link.target = "_blank";
+            link.download = "file.pdf"; // Nama file yang akan diunduh
+            
+            // Simulasikan klik pada elemen <a> yang tidak terlihat
+            link.click();
+        });
+    </script>
+</body>
+
+</html>

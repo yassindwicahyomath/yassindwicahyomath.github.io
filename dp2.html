@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Pustaka Otomatis</title>
+    <!-- Tambahkan tautan ke Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Daftar Pustaka</h1>
+        
+        <!-- Form untuk memasukkan daSta pustaka -->
+        <form id="pustakaForm">
+            <div class="form-group">
+                <label for="jenisPustaka">Jenis Pustaka (Buku/Jurnal):</label>
+                <select class="form-control" id="jenisPustaka" required>
+                    <option value="Buku">Buku</option>
+                    <option value="Jurnal">Jurnal</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="nama">Nama:</label>
+                <input type="text" class="form-control" id="nama" required>
+            </div>
+            <div class="form-group">
+                <label for="judul">Judul:</label>
+                <input type="text" class="form-control" id="judul" required>
+            </div>
+            <div class="form-group">
+                <label for="pengarang">Pengarang:</label>
+                <input type="text" class="form-control" id="pengarang" required>
+            </div>
+            <div class="form-group">
+                <label for="tahun">Tahun:</label>
+                <input type="number" class="form-control" id="tahun" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="generatePustaka()">Tambah Pustaka</button>
+        </form>
+        
+        <!-- Daftar Pustaka yang akan digenerate -->
+        <h2>Daftar Pustaka:</h2>
+        <ul id="daftarPustaka" class="list-group">
+        </ul>
+    </div>
+
+    <!-- Tambahkan tautan ke Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Fungsi untuk menambahkan pustaka ke daftar pustaka
+        function generatePustaka() {
+            const jenisPustaka = document.getElementById("jenisPustaka").value;
+            const nama = document.getElementById("nama").value;
+            const judul = document.getElementById("judul").value;
+            const pengarang = document.getElementById("pengarang").value;
+            const tahun = document.getElementById("tahun").value;
+
+            const daftarPustaka = document.getElementById("daftarPustaka");
+            const li = document.createElement("li");
+            li.className = "list-group-item";
+            li.innerHTML = `<strong>${jenisPustaka}:</strong> ${nama}, "${judul}," ${pengarang}, ${tahun}.`;
+            daftarPustaka.appendChild(li);
+
+            // Reset formulir setelah menambahkan pustaka
+            document.getElementById("pustakaForm").reset();
+        }
+    </script>
+</body>
+</html>
